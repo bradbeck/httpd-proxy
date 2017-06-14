@@ -17,8 +17,6 @@ RequestHeader set X-Proxy_REMOTE-USER admin\n\
 RequestHeader unset Authorization\n\
 \n\
 ProxyPreserveHost on\n\
-ProxyPass http://192.168.254.45:8081/nexus\n\
-ProxyPassReverse http://192.168.254.45:8081/nexus\n\
+ProxyPass http://nxrm:8081/nexus\n\
+ProxyPassReverse http://nxrm:8081/nexus\n\
 </Location>\n' >> /usr/local/apache2/conf/httpd.conf
-
-CMD [ "/bin/sh" ]
