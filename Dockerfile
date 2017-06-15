@@ -10,6 +10,7 @@ RUN sed \
     -e '/#LoadModule rewrite_module/ s/^#//' \
     -i /usr/local/apache2/conf/httpd.conf && \
     echo 'admin:$apr1$fyMhdpY5$gOiBUNmpSIBt2ZK8RCH2D1' > /usr/local/apache2/passwd && \
+    echo 'other:$apr1$BWS1JYMJ$9wa15SfIkF7wq2BYhQEpA/' >> /usr/local/apache2/passwd && \
     echo $'<Location /nexus>\n\
 AuthType Basic\n\
 AuthName NXRM3\n\
